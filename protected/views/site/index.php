@@ -12,14 +12,6 @@ $this->pageTitle=Yii::app()->name;
   <body>
 <h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
 
-<div id="login">
-  Hello Framework!<br>
-  Hello Test
-</div>
-<tabel class="myTable">
-  <tr><th>Hello</th><th>Hello1</th><th>Hello2</th></tr>
-  <tr><td>hi</td><td>hi1</td><td>hi2</td></tr>
-</tabel>
 <p>Congratulations! You have successfully created your Yii application.</p>
 
 <p>You may change the content of this page by modifying the following two files:</p>
