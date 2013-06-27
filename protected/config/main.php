@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Bulletin Board',
+	'name'=>'My Bulletin with Framework',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -37,23 +37,23 @@ return array(
 			'allowAutoLogin'=>true,
 		),
 		// uncomment the following to enable URLs in path-format
-//		
-//		'urlManager'=>array(
-//			'urlFormat'=>'path',
-//			'rules'=>array(
-//				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-//				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-//				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-//			),
-//		),
-		
-		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/PHP.db',
+		/*
+		'urlManager'=>array(
+			'urlFormat'=>'path',
+			'rules'=>array(
+				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+			),
 		),
+		*/
+//		'db'=>array(
+//			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
+//		),
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=PHP',
+			'connectionString' => 'mysql:host=localhost;dbname=testdrive',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
