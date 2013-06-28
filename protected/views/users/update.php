@@ -1,6 +1,6 @@
 <?php
 //@var $this UsersController
-// @var $model Users
+//@var $model Users
 
 $this->breadcrumbs=array(
 	'Users'=>array('index'),

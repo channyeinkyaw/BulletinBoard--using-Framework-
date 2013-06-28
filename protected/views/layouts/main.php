@@ -58,6 +58,7 @@
                     'items'=>array(
                         array('label'=>'Home', 'url'=>array('/site/index')),
                         array('label'=>'Board','url'=>array('/Board')),
+                        array('label'=>'Comment','url'=>array('/Comment')),
                         array('label'=>'Users','url'=>array('/users/index')),
                         array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'))
                     ),
