@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+	<title><?php echo CHtml::encode(Yii::app()->name);?></title>
 </head>
 
 <body>
@@ -58,7 +58,7 @@
                     'items'=>array(
                         array('label'=>'Home', 'url'=>array('/site/index')),
                         array('label'=>'Board','url'=>array('/Board')),
-                        array('label'=>'Comment','url'=>array('/Comment')),
+//                        array('label'=>'Comment','url'=>array('/Comment')),
                         array('label'=>'Users','url'=>array('/users/index')),
                         array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'))
                     ),
@@ -73,7 +73,7 @@
 		)); ?><!-- breadcrumbs -->
 	<?php endif?>
 
-	<?php echo $content; ?>
+	<?php echo $content;?>
 
 	<div class="clear"></div>
 

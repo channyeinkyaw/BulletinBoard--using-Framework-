@@ -122,7 +122,10 @@ class BoardController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Board');
+		$dataProvider=new CActiveDataProvider('Board', array('criteria'=>array(
+        'order'=>'ID ASC',),
+        'pagination'=>array('pageSize'=>5,),));
+        
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

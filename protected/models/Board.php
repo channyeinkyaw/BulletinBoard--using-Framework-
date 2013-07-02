@@ -52,6 +52,7 @@ class Board extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            
 		);
 	}
 
@@ -84,6 +85,7 @@ class Board extends CActiveRecord
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+            
 		));
 	}
 }

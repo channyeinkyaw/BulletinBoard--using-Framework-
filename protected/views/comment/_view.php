@@ -6,10 +6,10 @@
 <div class="view">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
+	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id, 'title'=>$_GET['title'])); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('board_id')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('board_id ')); ?>:</b>
 	<?php echo CHtml::encode($data->board_id); ?>
 	<br />
 
@@ -24,6 +24,5 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('user_name')); ?>:</b>
 	<?php echo CHtml::encode($data->user_name); ?>
 	<br />
-
-
+    
 </div>

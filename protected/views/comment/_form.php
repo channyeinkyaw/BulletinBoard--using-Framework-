@@ -16,9 +16,9 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'board_id'); ?>
+		<?php echo $form->labelEx($model,'board_id '); ?>
 		<?php echo $form->textField($model,'board_id'); ?>
-		<?php echo $form->error($model,'board_id'); ?>
+		<?php echo $form->error($model,'board_id');?>
 	</div>
 
 	<div class="row">

@@ -49,10 +49,10 @@ class CommentController extends Controller
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
+	public function actionView($id, $title)
 	{
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$this->loadModel($id, $title),
 		));
 	}
 
@@ -63,15 +63,14 @@ class CommentController extends Controller
 	public function actionCreate()
 	{
 		$model=new Comment;
-
+        
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
 		if(isset($_POST['Comment']))
 		{
 			$model->attributes=$_POST['Comment'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('view','id'=>$model->id, 'title'=>$_GET['title']));
 		}
 
 		$this->render('create',array(
@@ -84,18 +83,17 @@ class CommentController extends Controller
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate($id)
+	public function actionUpdate($id, $title)
 	{
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
 		if(isset($_POST['Comment']))
 		{
 			$model->attributes=$_POST['Comment'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('view','id'=>$id, 'title'=>$title));
 		}
 
 		$this->render('update',array(
@@ -120,9 +118,15 @@ class CommentController extends Controller
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex()
+	public function actionIndex($id, $title)
 	{
-		$dataProvider=new CActiveDataProvider('Comment');
+		$dataProvider=new CActiveDataProvider('Comment', array ( 
+        'criteria' => array (
+            'condition' => 'board_id =:param',
+             'params' => array(':param' => $id)
+        ),
+            'pagination' => array('pageSize' => 4,),
+            ));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

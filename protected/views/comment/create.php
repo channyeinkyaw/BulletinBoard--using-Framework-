@@ -3,12 +3,15 @@
 /* @var $model Comment */
 
 $this->breadcrumbs=array(
-	'Comments'=>array('index'),
+    'Boards'=>array('/Board/index'),
+    $_GET['title']=>array('/Board/view', 'id'=>$_GET['id']),
+//	'Comments'=>array('index'),
+    'Comments'=>array('/Comment', 'id'=>$_GET['id'], 'title'=>$_GET['title']),
 	'Create',
 );
 
 $this->menu=array(
-	array('label'=>'List Comment', 'url'=>array('index')),
+//	array('label'=>'List Comment', 'url'=>array('index')),
 	array('label'=>'Manage Comment', 'url'=>array('admin')),
 );
 ?>
