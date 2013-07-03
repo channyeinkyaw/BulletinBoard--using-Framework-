@@ -17,5 +17,4 @@
 	<?php echo CHtml::encode($data->created_at); ?>
 	<br />
 
-
 </div>

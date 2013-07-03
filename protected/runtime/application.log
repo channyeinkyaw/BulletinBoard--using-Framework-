@@ -4806,3 +4806,71 @@ Stack trace:
 REQUEST_URI=/BulletinFramework/index.php?r=comment/view&id=13&title=Board3
 HTTP_REFERER=http://localhost/BulletinFramework/index.php?r=comment/create&id=13&title=Board3
 ---
+2013/07/03 01:35:14 [error] [exception.CException] exception 'CException' with message 'Property "Comment.data" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('data')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('data')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1980): CHtml::resolveValue(Object(Comment), 'data')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1257): CHtml::activeInputField('text', Object(Comment), 'data', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php(657): CHtml::activeTextField(Object(Comment), 'data', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/BulletinFramework/protected/views/comment/_form.php(20): CActiveForm->textField(Object(Comment), 'data')
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/BulletinFramework/protected/views/comment/create.php(21): CController->renderPartial('_form', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/BulletinFramework/protected/controllers/CommentController.php(78): CController->render('create', Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): CommentController->actionCreate()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comment/create')
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#27 /Applications/XAMPP/xamppfiles/htdocs/BulletinFramework/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/BulletinFramework/index.php?r=comment/create&id=1&title=Board1
+HTTP_REFERER=http://localhost/BulletinFramework/index.php?r=Comment&id=1&title=Board1
+---
+2013/07/03 01:35:17 [error] [exception.CException] exception 'CException' with message 'Property "Comment.data" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('data')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('data')
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1980): CHtml::resolveValue(Object(Comment), 'data')
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/helpers/CHtml.php(1257): CHtml::activeInputField('text', Object(Comment), 'data', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/widgets/CActiveForm.php(657): CHtml::activeTextField(Object(Comment), 'data', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/BulletinFramework/protected/views/comment/_form.php(20): CActiveForm->textField(Object(Comment), 'data')
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#9 /Applications/XAMPP/xamppfiles/htdocs/BulletinFramework/protected/views/comment/create.php(21): CController->renderPartial('_form', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(126): require('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Applications/X...', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(869): CBaseController->renderFile('/Applications/X...', Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#14 /Applications/XAMPP/xamppfiles/htdocs/BulletinFramework/protected/controllers/CommentController.php(78): CController->render('create', Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(49): CommentController->actionCreate()
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#25 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('comment/create')
+#26 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#27 /Applications/XAMPP/xamppfiles/htdocs/BulletinFramework/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/BulletinFramework/index.php?r=comment/create&id=1&title=Board1
+HTTP_REFERER=http://localhost/BulletinFramework/index.php?r=Comment&id=1&title=Board1
+---

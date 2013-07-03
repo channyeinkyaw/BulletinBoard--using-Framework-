@@ -44,5 +44,4 @@
 	</div>
 
 <?php $this->endWidget(); ?>
-
 </div><!-- form -->
